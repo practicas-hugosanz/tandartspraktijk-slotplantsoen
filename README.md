@@ -41,6 +41,22 @@ imagen para redes (`og-slotplantsoen.jpg`). Solo hace falta si cambian las fotos
 
 ---
 
+## Demo en GitHub Pages
+
+Demo para el cliente: https://practicas-hugosanz.github.io/tandartspraktijk-slotplantsoen/
+(repo `practicas-hugosanz/tandartspraktijk-slotplantsoen`). Esa versión se genera con
+`noindex` para que Google no la indexe ni compita con la web real:
+
+```bash
+SLOT_DEMO=1 SLOT_BASE=/tandartspraktijk-slotplantsoen/ python -I _build/build.py
+```
+
+En Git Bash de Windows añade `MSYS_NO_PATHCONV=1` delante, o la ruta de `SLOT_BASE` se
+convierte en una ruta de Windows.
+
+**Para publicarla en praktijkslotplantsoen.nl** genera sin esas variables
+(`python -I _build/build.py`), así vuelve el `index,follow` y la 404 usa `/`.
+
 ## SEO — lo que lleva
 
 - **Mismas URLs que la web antigua** (`/behandelingen/implantaten/`, `/homepage/ons-team/`,
