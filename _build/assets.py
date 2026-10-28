@@ -32,6 +32,7 @@ TEAM = ["Safae", "Alvaro", "Mauricio", "Kinan", "anna", "Ina", "Marloes", "Naima
 for n in TEAM:
     webp(SRC / f"{n}.jpg", IMG / "team" / f"{n.lower()}.webp", 480)
 webp(SRC / "Kinan.jpg", IMG / "hero-kinan.webp", 760, 80)
+webp(SRC / "Alvaro.jpg", IMG / "alvaro-groot.webp", 760, 80)
 
 # Praktijk- en behandelfoto's
 webp(SRC / "Schermafbeelding-2021-02-26-om-14.48.02.png", IMG / "praktijk-gevel.webp", 1100)

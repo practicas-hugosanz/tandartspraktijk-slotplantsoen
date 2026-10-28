@@ -669,7 +669,7 @@ def home():
     </div>
     <div class="pk__pics rv">
       <figure class="pk__wide"><img src="{{a:assets/img/praktijk-gevel.webp}}" alt="Entree van Tandartspraktijk Slotplantsoen aan het Slotplantsoen in Meppel" width="1100" height="736" loading="lazy" decoding="async"><figcaption><b>Slotplantsoen 1a, midden in Meppel.</b> Op maandag geopend tot 20:00 uur. In huis: een 3D CBCT-scanner en een eigen tandtechnisch laboratorium voor kronen, bruggen en protheses.</figcaption></figure>
-      <figure class="pk__tall"><img src="{{a:assets/img/hero-kinan.webp}}" alt="Tandarts Kinan Khalil in een behandelkamer van de praktijk" width="760" height="1140" loading="lazy" decoding="async"><figcaption><b>Tandarts Kinan Khalil,</b> een van onze vijf tandartsen. Samen hebben zij aandacht voor implantologie, orthodontie en esthetiek.</figcaption></figure>
+      <figure class="pk__tall"><img src="{{a:assets/img/alvaro-groot.webp}}" alt="Alvaro Soler, tandarts-implantoloog bij Tandartspraktijk Slotplantsoen" width="760" height="1140" loading="lazy" decoding="async"><figcaption><b>Alvaro Soler, tandarts-implantoloog,</b> een van onze vijf tandartsen. Samen hebben zij aandacht voor implantologie, orthodontie en esthetiek.</figcaption></figure>
     </div>
   </div>
 </section>
