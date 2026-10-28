@@ -382,6 +382,15 @@ html.menu-open{overflow:clip}
 
 /* team */
 .team-strip{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(190px,220px);gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px var(--gut) 20px;margin-inline:calc(var(--gut)*-1);scrollbar-width:thin;scrollbar-color:var(--gold) transparent}
+.team-strip{scroll-padding-inline:var(--gut)}
+.team-head__act{display:flex;align-items:center;gap:24px}
+.rail-nav{display:flex;gap:8px}
+.rail-nav button{display:grid;place-items:center;width:44px;height:44px;border:1px solid var(--field-edge);border-radius:50%;background:var(--snow);color:var(--navy);cursor:pointer;transition:background .2s,border-color .2s,color .2s,opacity .2s}
+.rail-nav button:hover{background:var(--navy);border-color:var(--navy);color:var(--snow)}
+.rail-nav button:active{transform:translateY(1px)}
+.rail-nav button:disabled{opacity:.35;cursor:not-allowed;background:var(--snow);color:var(--navy);border-color:var(--field-edge)}
+.rail-nav svg{width:18px;height:18px}
+.rail-nav [data-rail="-1"] svg{transform:scaleX(-1)}
 .person{scroll-snap-align:start;margin:0}
 .person img{border-radius:var(--r-md);aspect-ratio:4/5;object-fit:cover;object-position:50% 18%;width:100%;background:var(--sand);filter:saturate(.92);transition:filter .3s}
 .person:hover img{filter:none}
@@ -635,6 +644,8 @@ html.menu-open{overflow:clip}
   .footer__bottom{padding-bottom:92px}
 }
 @media (max-width:720px){
+  .team-strip{grid-auto-columns:64vw}
+  .team-head__act{justify-content:space-between;width:100%}
   .week li{column-gap:16px;padding:12px 8px;font-size:.92rem}
   body{font-size:1rem}
   .section__head{grid-template-columns:minmax(0,1fr)}

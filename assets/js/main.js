@@ -97,6 +97,27 @@
     }
   }
 
+  /* ---------- Teamstrook: pijlknoppen naast het vegen ---------- */
+  document.querySelectorAll("[data-rail]").forEach(function (btn) {
+    var strip = document.getElementById(btn.getAttribute("aria-controls"));
+    if (!strip) return;
+    btn.addEventListener("click", function () {
+      strip.scrollBy({ left: +btn.getAttribute("data-rail") * strip.clientWidth * 0.8, behavior: reduce ? "auto" : "smooth" });
+    });
+  });
+  document.querySelectorAll(".team-strip").forEach(function (strip) {
+    var prev = document.querySelector('[data-rail="-1"][aria-controls="' + strip.id + '"]');
+    var next = document.querySelector('[data-rail="1"][aria-controls="' + strip.id + '"]');
+    if (!prev || !next) return;
+    var update = function () {
+      prev.disabled = strip.scrollLeft <= 4;
+      next.disabled = strip.scrollLeft + strip.clientWidth >= strip.scrollWidth - 4;
+    };
+    strip.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
+    update();
+  });
+
   /* ---------- Desktop dropdowns ---------- */
   var items = document.querySelectorAll(".nav__item.has-drop");
   function closeAll(except) {

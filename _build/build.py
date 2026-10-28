@@ -701,9 +701,12 @@ def home():
   <div class="wrap">
     <div class="section__head rv">
       <div><h2 id="team-h">Ons team</h2><p>Vertrouwde gezichten: veertien collega’s die elke dag klaarstaan voor uw mondgezondheid, van tandarts tot tandtechnieker.</p></div>
-      <a class="link" href="{{u:homepage/ons-team/}}">Maak kennis met het team {icon("arrow")}</a>
+      <div class="team-head__act">
+        <a class="link" href="{{u:homepage/ons-team/}}">Maak kennis met het team {icon("arrow")}</a>
+        <div class="rail-nav"><button type="button" data-rail="-1" aria-controls="team-strip" aria-label="Vorige teamleden"><svg aria-hidden="true"><use href="#i-arrow"/></svg></button><button type="button" data-rail="1" aria-controls="team-strip" aria-label="Volgende teamleden"><svg aria-hidden="true"><use href="#i-arrow"/></svg></button></div>
+      </div>
     </div>
-    <div class="team-strip" tabindex="0" aria-label="Teamleden, scroll horizontaal">{team}</div>
+    <div class="team-strip" id="team-strip" tabindex="0" aria-label="Teamleden, veeg of scroll horizontaal">{team}</div>
   </div>
 </section>
 
